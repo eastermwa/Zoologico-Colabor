@@ -1,0 +1,509 @@
+.pagina-contactenos {
+    margin: 0;
+    background-color: #0b110d;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+.contenedor-principal-contactenos {
+    background-color: #0b110d;
+    min-height: 90vh;
+}
+.menu-contactenos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    text-align: center;
+    flex-wrap: wrap;
+    background-color: #0b110d;
+}
+.logo-contactenos {
+    font-size: 22px;
+    font-weight: bold;
+    color: #c2c784;
+    letter-spacing: 2px;
+}
+.navegacion-contactenos {
+    display: flex;
+    gap: 25px;
+    font-size: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.enlace-menu {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.enlace-menu:hover {
+    text-decoration: underline;
+    color: #c2c784;
+}
+.enlace-menu-activo {
+    color: #ffffff;
+    font-weight: bold;
+}
+.contenido-contactenos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 20px;
+    min-height: 600px;
+    box-sizing: border-box;
+}
+.tarjeta-contactenos {
+    width: 100%;
+    max-width: 560px;
+    border: 1px solid rgba(194, 199, 132, 0.4);
+    border-radius: 16px;
+    color: #ffffff;
+    background: #141c16;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.85);
+    overflow: hidden;
+}
+.encabezado-contactenos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 78px;
+    background: #0b110d;
+    border-bottom: 1px solid rgba(194, 199, 132, 0.2);
+}
+.titulo-contactenos {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: #c2c784;
+    letter-spacing: 1px;
+}
+.formulario-contactenos {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 26px 21px 28px;
+}
+.texto-contactenos {
+    margin: 0 0 8px;
+    line-height: 24px;
+    color: #aaaaaa;
+    font-size: 14px;
+}
+.campo-contactenos {
+    width: 100%;
+    height: 56px;
+    padding: 0 17px;
+    font: inherit;
+    color: #ffffff;
+    background: #0b110d;
+    border: 1px solid rgba(194, 199, 132, 0.3);
+    border-radius: 28px;
+    box-sizing: border-box;
+}
+.campo-contactenos:focus {
+    outline: 0;
+    border-color: #c2c784;
+    box-shadow: 0 0 0 1px #c2c784;
+}
+.grupo-telefono-contactenos {
+    display: flex;
+    height: 56px;
+    border: 1px solid rgba(194, 199, 132, 0.3);
+    border-radius: 28px;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: #0b110d;
+}
+.select-prefijo-contactenos {
+    height: 100%;
+    font: inherit;
+    color: #aaaaaa;
+    background-color: #0b110d;
+    border: 0;
+    border-radius: 0;
+    flex: 0 0 clamp(130px, 35%, 180px);
+    padding: 0 30px 0 17px;
+    border-right: 1px solid rgba(194, 199, 132, 0.3);
+    appearance: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.opcion-prefijo-contactenos {
+    background: #0b110d;
+    color: #ffffff;
+}
+.campo-telefono-contactenos {
+    height: 100%;
+    font: inherit;
+    color: #ffffff;
+    background-color: #0b110d;
+    border: 0;
+    border-radius: 0;
+    flex: 1;
+    min-width: 0;
+    padding: 0 17px;
+    box-sizing: border-box;
+}
+.grupo-telefono-contactenos:focus-within {
+    border-color: #c2c784;
+    box-shadow: 0 0 0 1px #c2c784;
+}
+.campo-telefono-contactenos:focus,
+.select-prefijo-contactenos:focus {
+    outline: 0;
+}
+.campo-mensaje-contactenos {
+    width: 100%;
+    height: 100px;
+    padding: 18px 17px;
+    font: inherit;
+    color: #ffffff;
+    background: #0b110d;
+    border: 1px solid rgba(194, 199, 132, 0.3);
+    border-radius: 20px;
+    line-height: 22px;
+    resize: none;
+    box-sizing: border-box;
+}
+.campo-mensaje-contactenos:focus {
+    outline: 0;
+    border-color: #c2c784;
+    box-shadow: 0 0 0 1px #c2c784;
+}
+.check-contactenos {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #aaaaaa;
+    cursor: pointer;
+}
+.input-check-contactenos {
+    flex: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: #c2c784;
+    cursor: pointer;
+}
+.boton-enviar-contactenos {
+    height: 44px;
+    margin-top: 10px;
+    font: inherit;
+    font-size: 15px;
+    font-weight: bold;
+    color: #0b110d;
+    background: #c2c784;
+    border: 0;
+    border-radius: 22px;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.boton-enviar-contactenos:hover {
+    background: #ffffff;
+    color: #0b110d;
+}
+.footer-contactenos {
+    background-color: #0b110d;
+    padding: 45px 40px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.contenido-footer-contactenos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+.columna-footer-contactenos {
+    display: flex;
+    flex-direction: column;
+}
+.columna-descripcion-contactenos {
+    max-width: 260px;
+}
+.titulo-footer-contactenos {
+    color: #c2c784;
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin: 0.83em 0;
+}
+.subtitulo-footer-contactenos {
+    color: #c2c784;
+    font-size: 17px;
+}
+.texto-footer-contactenos {
+    color: #aaaaaa;
+    font-size: 14px;
+    line-height: 1.7;
+}
+.enlace-footer-contactenos {
+    display: block;
+    color: #aaaaaa;
+    text-decoration: none;
+    margin: 12px 0;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+.enlace-footer-contactenos:hover {
+    color: #c2c784;
+}
+@media (max-width: 650px) {
+    .menu-contactenos {
+        justify-content: center;
+        gap: 20px;
+        padding: 15px 20px;
+    }
+    .navegacion-contactenos {
+        justify-content: center;
+        gap: 15px;
+    }
+    .contenido-contactenos {
+        padding: 40px 15px;
+    }
+    .formulario-contactenos {
+        padding: 22px 16px;
+    }
+    .footer-contactenos {
+        padding: 35px 20px 20px;
+    }
+    .contenido-footer-contactenos {
+        justify-content: flex-start;
+    }
+}
+/*Animales*/ 
+.pagina-animales {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #243324;
+    background-color: #0b110d;
+}
+.fondo-animales {
+    background-color: #0b110d;
+    min-height: 90vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    background-image: linear-gradient(
+        rgba(0,0,0,0.20),
+        rgba(0,0,0,0.40)
+    ), url('img/Nutria.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.menu-animales {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.logo-animales {
+    font-size: 22px;
+    font-weight: bold;
+    color: #c2c784;
+    letter-spacing: 2px;
+}
+.navegacion-animales {
+    display: flex;
+    gap: 25px;
+    font-size: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.navegacion-animales a {
+    color: #aaaaaa;
+    text-decoration: none;
+}
+.navegacion-animales a:first-child {
+    color: #ffffff;
+    font-weight: bold;
+}
+.navegacion-animales a:hover {
+    color: #c2c784;
+    text-decoration: underline;
+}
+.titulo-animales {
+    text-align: center;
+    padding: 85px 20px;
+}
+.titulo-animales p {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+.seccion-animales {
+    padding: 70px 40px;
+    background-color: #141c16;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.encabezado-animales {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.encabezado-animales p {
+    color: #c2c784;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.encabezado-animales h2 {
+    font-size: 30px;
+    color: #ffffff;
+    margin: 0;
+}
+.contenedor-animales {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.tarjeta-animal {
+    background-color: #141c16;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 320px;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.tarjeta-animal:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+}
+.imagen-animal {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+}
+.imagen-leon {
+    background-image: url('img/Leones.jpeg');
+}
+.imagen-jirafa {
+    background-image: url('img/Girafas.jpeg');
+}
+.imagen-elefante {
+    background-image: url('img/Elefante.jpeg');
+}
+.imagen-mono {
+    background-image: url('img/Monos.jpeg');
+}
+.imagen-loro {
+    background-image: url('img/loritos.jpeg');
+}
+.contenido-animal {
+    padding: 20px;
+}
+.contenido-animal h3 {
+    color: #ffffff;
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+.contenido-animal p {
+    color: #aaaaaa;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+.footer-animales {
+    background-color: #0b110d;
+    padding: 45px 40px 20px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.contenedor-footer-animales {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.descripcion-footer-animales {
+    max-width: 260px;
+}
+
+.descripcion-footer-animales h2 {
+    color: #c2c784;
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-top: 0;
+}
+
+.descripcion-footer-animales p {
+    color: #aaaaaa;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.columna-footer-animales h3 {
+    color: #c2c784;
+    font-size: 17px;
+    margin-top: 0;
+}
+
+.columna-footer-animales a {
+    display: block;
+    color: #aaaaaa;
+    text-decoration: none;
+    margin: 12px 0;
+    font-size: 14px;
+}
+
+.columna-footer-animales p {
+    color: #aaaaaa;
+    font-size: 14px;
+    margin: 12px 0;
+}
+
+.columna-footer-animales a:hover {
+    color: #c2c784;
+    text-decoration: underline;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .menu-animales {
+        justify-content: center;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .navegacion-animales {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .titulo-animales {
+        padding: 60px 15px;
+    }
+
+    .titulo-animales p {
+        font-size: 17px;
+    }
+
+    .seccion-animales {
+        padding: 50px 20px;
+    }
+
+    .tarjeta-animal {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .footer-animales {
+        padding: 35px 20px;
+    }
+
+    .contenedor-footer-animales {
+        justify-content: flex-start;
+    }
+}
