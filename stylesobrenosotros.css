@@ -1,0 +1,534 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #0b110d;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+.cabecera-principal {
+    background-color: #0b110d;
+    min-height: 90vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.40)), url('img/Loro_inicio.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #c2c784;
+    letter-spacing: 2px;
+}
+.menu-enlaces {
+    display: flex;
+    gap: 25px;
+    font-size: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.enlace {
+    color: #ffffff;
+    text-decoration: none;
+    transition: text-decoration 0.2s ease;
+}
+.enlace:hover {
+    text-decoration: underline;
+}
+
+.enlace.activo {
+    font-weight: bold;
+}
+
+/* Sección Hero / Bienvenida */
+.seccion-hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.tarjeta-hero {
+    background-color: rgba(35, 35, 35, 0.45);
+    backdrop-filter: blur(5px);
+    color: white;
+    padding: 35px;
+    border-radius: 12px;
+    max-width: 460px;
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
+}
+
+.tarjeta-hero:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.7);
+}
+
+.subtitulo-1 {
+    color: #c2c784;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin: 0 0 10px;
+    font-weight: bold;
+}
+
+.titulo-1 {
+    font-size: 36px;
+    line-height: 1.1;
+    margin: 0 0 12px;
+    color: #ffffff;
+}
+
+.texto-hero {
+    color: #f2f2f2;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0 0 20px;
+}
+
+.boton-hero {
+    display: inline-block;
+    background-color: #54582f;
+    color: #ffffff;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.boton-hero:hover {
+    background-color: #6c723d;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(84, 88, 47, 0.5);
+}
+
+/* Sección Exhibiciones */
+.seccion-exhibiciones {
+    padding: 70px 40px;
+    background-color: #0b110d;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.contenedor-titulo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.subtitulo-exhibicion {
+    color: #c2c784;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.titulo-exhibicion {
+    font-size: 30px;
+    color: #ffffff;
+    margin: 0;
+}
+.rejilla-exhibiciones {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.tarjeta-exhibicion {
+    background-color: #141c16;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 320px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.tarjeta-exhibicion:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+.imagen-exhibicion {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+}
+.imagen-aves { background-image: url('img/Pajaritos.jpg'); }
+.imagen-leones { background-image: url('img/Leones.jpeg'); }
+.imagen-reptiles { background-image: url('img/reptiles.jpg'); }
+.contenido-exhibicion {
+    padding: 20px;
+}
+.contenido-exhibicion h3 {
+    color: #ffffff;
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+.contenido-exhibicion p {
+    color: #aaaaaa;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+.banner-experiencia {
+    background-color: #18251b;
+    padding: 65px 40px;
+    text-align: center;
+}
+.subtitulo-banner {
+    color: #c2c784;
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+.titulo-banner {
+    color: #ffffff;
+    font-size: 32px;
+    margin: 10px 0 15px;
+}
+.texto-banner {
+    color: #cccccc;
+    font-size: 15px;
+    max-width: 650px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+}
+.banner-aventura {
+    background-color: #0b110d;
+    padding: 65px 20px;
+    text-align: center;
+}
+.boton-aventura {
+    display: inline-block;
+    background-color: #c2c784;
+    color: #18251b;
+    padding: 15px 32px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+.boton-aventura:hover {
+    transform: translateY(-4px);
+}
+.pie-pagina {
+    background-color: #0b110d;
+    padding: 45px 40px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.contenedor-pie {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+.columna-pie {
+    max-width: 260px;
+}
+.logo-pie {
+    color: #c2c784;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+.descripcion-pie {
+    color: #aaaaaa;
+    font-size: 14px;
+    line-height: 1.7;
+}
+.columna-pie h3 {
+    color: #c2c784;
+    font-size: 17px;
+}
+.columna-pie a, .columna-pie p {
+    color: #aaaaaa;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    margin: 12px 0;
+}
+.columna-pie a:hover {
+    color: #ffffff;
+}
+
+/* SOBRE NOSOTROS*/
+
+.fondo-sobre-nosotros {
+    background-color: #0b110d;
+    min-height: 90vh;
+    padding: 20px;
+    background-image: linear-gradient(
+        rgba(0,0,0,0.20),
+        rgba(0,0,0,0.40)
+    ), url('img/quhl-meerkat-4821484_1920.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-sobre-nosotros {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.logo-sobre-nosotros {
+    font-size: 22px;
+    font-weight: bold;
+    color: #c2c784;
+    letter-spacing: 2px;
+}
+
+.navegacion-sobre-nosotros {
+    display: flex;
+    gap: 25px;
+    font-size: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navegacion-sobre-nosotros a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navegacion-sobre-nosotros a:hover {
+    text-decoration: underline;
+}
+
+.titulo-sobre-nosotros {
+    text-align: center;
+    padding: 85px 20px;
+}
+
+.titulo-sobre-nosotros h1 {
+    font-size: 48px;
+    color: #c2c784;
+    margin-bottom: 15px;
+}
+
+.titulo-sobre-nosotros p {
+    font-size: 19px;
+    color: white;
+}
+.seccion-quienes-somos {
+    padding: 65px 10%;
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    flex-wrap: wrap;
+}
+
+.texto-quienes-somos {
+    flex: 1;
+    min-width: 280px;
+}
+
+.texto-quienes-somos h2 {
+    color: #c2c784;
+    font-size: 32px;
+}
+
+.texto-quienes-somos p {
+    color: #d5d5d5;
+    line-height: 1.8;
+    font-size: 17px;
+    margin-top: 12px;
+}
+
+.video-sobre-nosotros {
+    flex: 1;
+    min-width: 280px;
+}
+
+.video-sobre-nosotros video {
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px #000;
+}
+
+/* Misión y visión */
+.seccion-mision-vision {
+    padding: 55px 8%;
+    background-color: #141c16;
+}
+
+.contenedor-mision-vision {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.tarjeta-mision,
+.tarjeta-vision {
+    flex: 1;
+    min-width: 250px;
+    background-color: #0b110d;
+    padding: 35px;
+    border-radius: 15px;
+    border: 1px solid #c2c784;
+}
+
+.tarjeta-mision h2,
+.tarjeta-vision h2 {
+    color: #c2c784;
+}
+
+.tarjeta-mision p,
+.tarjeta-vision p {
+    color: #d5d5d5;
+    line-height: 1.8;
+    margin-top: 12px;
+}
+
+/* Nuestros valores */
+.seccion-valores {
+    padding: 65px 8%;
+    text-align: center;
+}
+
+.seccion-valores h2 {
+    font-size: 32px;
+    color: #c2c784;
+}
+
+.contenedor-valores {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.tarjeta-valor {
+    flex: 1;
+    min-width: 200px;
+    padding: 25px;
+    background: #141c16;
+    border-radius: 15px;
+}
+
+.tarjeta-valor h3 {
+    color: #c2c784;
+}
+
+.tarjeta-valor p {
+    color: #d5d5d5;
+    line-height: 1.7;
+    margin-top: 10px;
+}
+
+/* Footer de Sobre Nosotros */
+.footer-sobre-nosotros {
+    background-color: #0b110d;
+    padding: 45px 40px 20px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.contenedor-footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.footer-descripcion {
+    max-width: 260px;
+}
+
+.footer-descripcion h2 {
+    color: #c2c784;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+.footer-descripcion p {
+    color: #aaaaaa;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-top: 12px;
+}
+
+.footer-navegacion,
+.footer-contacto,
+.footer-redes {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-navegacion h3,
+.footer-contacto h3,
+.footer-redes h3 {
+    color: #c2c784;
+    font-size: 17px;
+}
+
+.footer-navegacion a,
+.footer-contacto a,
+.footer-redes a {
+    color: #aaaaaa;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 12px 0;
+}
+
+.footer-contacto p {
+    color: #aaaaaa;
+    font-size: 14px;
+    margin: 12px 0;
+}
+
+.footer-navegacion a:hover,
+.footer-contacto a:hover,
+.footer-redes a:hover {
+    color: #ffffff;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 768px) {
+
+    .menu-sobre-nosotros {
+        justify-content: center;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .navegacion-sobre-nosotros {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .titulo-sobre-nosotros h1 {
+        font-size: 34px;
+    }
+
+    .seccion-quienes-somos {
+        padding: 45px 6%;
+    }
+
+    .contenedor-mision-vision,
+    .contenedor-valores {
+        flex-direction: column;
+    }
+
+    .footer-sobre-nosotros {
+        padding: 35px 20px;
+    }
+}

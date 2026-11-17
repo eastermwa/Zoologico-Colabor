@@ -1,0 +1,367 @@
+/* ==========================================
+   ESTILOS GENERALES
+   ========================================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #0b110d;
+    color: #f8fafc;
+}
+
+/* ==========================================
+   SECCIÓN IZQUIERDA: Formulario de Login
+   ========================================== */
+.login-section {
+    flex: 1;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 60px;
+    min-height: 100vh;
+    background-color: #0b110d;
+}
+
+/* Logo / Marca */
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #c2c784;
+    letter-spacing: 2px;
+}
+
+.brand-icon {
+    width: 28px;
+    height: 28px;
+    background: #c2c784;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0b110d;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+/* Contenedor del Formulario */
+.form-container {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.login-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #c2c784;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.5px;
+}
+
+.login-subtitle {
+    color: #94a3b8;
+    font-size: 14px;
+    margin: 0 0 24px 0;
+    line-height: 1.5;
+}
+
+/* Botones Sociales */
+.social-buttons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.btn-social {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    color: #f8fafc;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.btn-social:hover {
+    border-color: #c2c784;
+    color: #c2c784;
+}
+
+/* Divisor */
+.divider {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 12px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.divider span {
+    background: #0b110d;
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.divider-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 0;
+}
+
+/* Campos del Formulario */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #c2c784;
+    margin-bottom: 6px;
+}
+
+.form-label.no-margin {
+    margin-bottom: 0;
+}
+
+.password-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.forgot-link {
+    font-size: 13px;
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.forgot-link:hover {
+    color: #c2c784;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    color: #f8fafc;
+    background: rgba(255, 255, 255, 0.03);
+    transition: border-color 0.2s;
+}
+
+.form-input:focus {
+    border-color: #c2c784;
+}
+
+/* Checkbox Recordar */
+.remember-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 4px 0;
+}
+
+.remember-checkbox {
+    width: 16px;
+    height: 16px;
+    accent-color: #c2c784;
+    cursor: pointer;
+}
+
+.remember-label {
+    font-size: 13px;
+    color: #94a3b8;
+    cursor: pointer;
+}
+
+/* Botón Principal */
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background: #c2c784;
+    color: #0b110d;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-submit:hover {
+    background: #a8ad6e;
+}
+
+/* Enlace de Registro */
+.signup-prompt {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+.signup-link {
+    color: #c2c784;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* Footer Izquierdo */
+.login-footer {
+    font-size: 12px;
+    color: #94a3b8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.footer-link {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: #c2c784;
+}
+
+/* ==========================================
+   SECCIÓN DERECHA: Imagen + Testimonio
+   ========================================== */
+.hero-section {
+    flex: 1;
+    min-width: 320px;
+    position: relative;
+    margin: 12px;
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 40px;
+    min-height: 500px;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(11, 17, 13, 0.85) 0%, rgba(11, 17, 13, 0.3) 50%, rgba(0, 0, 0, 0) 100%);
+    z-index: -1;
+}
+
+.hero-badge {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: rgba(11, 17, 13, 0.75);
+    backdrop-filter: blur(8px);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #c2c784;
+    border: 1px solid rgba(194, 199, 132, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Tarjeta de Testimonio */
+.testimonial-card {
+    width: 100%;
+    z-index: 1;
+}
+
+.testimonial-stars {
+    color: #fbbf24;
+    font-size: 14px;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+}
+
+.testimonial-quote {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 0 0 16px 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.author-avatar {
+    width: 36px;
+    height: 36px;
+    background: #c2c784;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 12px;
+    color: #0b110d;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.author-name {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.author-role {
+    color: #94a3b8;
+    font-size: 12px;
+}

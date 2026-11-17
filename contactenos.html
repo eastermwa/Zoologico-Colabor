@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos | ZooNiverse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="pagina-contactenos">
+
+    <div class="contenedor-principal-contactenos">
+
+        <nav class="menu-contactenos">
+            <div class="logo-contactenos">ZooNiverse</div>
+
+            <div class="navegacion-contactenos">
+                <a href="Inicio.html" class="enlace-menu">Inicio</a>
+                <a href="SobreNosotros.html" class="enlace-menu">Sobre Nosotros</a>
+                <a href="animales.html" class="enlace-menu">Animales</a>
+                <a href="#contactenos" class="enlace-menu enlace-menu-activo">Contáctanos</a>
+                <a href="LoginZoo.html" class="enlace-menu">Inicio Sesion</a>
+                <a href="SitiosInteresZoo.html" class="enlace-menu">Sitios de Interes</a>
+            </div>
+        </nav>
+
+        <main id="contactenos" class="contenido-contactenos">
+
+            <div class="tarjeta-contactenos">
+
+                <div class="encabezado-contactenos">
+                    <h2 id="titulo-contacto" class="titulo-contactenos">Contáctanos</h2>
+                </div>
+
+                <form action="mailto:zooniverse@gmail.com" method="post" enctype="text/plain" class="formulario-contactenos">
+
+                    <p class="texto-contactenos">
+                        Completa el formulario y nuestros asesores te contactarán lo antes posible para darte toda la información que necesitas.
+                    </p>
+
+                    <input type="text" name="nombre" placeholder="Nombre" autocomplete="name" required class="campo-contactenos">
+
+                    <input type="email" name="correo" placeholder="Correo electrónico" autocomplete="email" required class="campo-contactenos">
+
+                    <!-- Prefijo + Teléfono -->
+                    <div class="grupo-telefono-contactenos">
+
+                        <select name="prefijo" aria-label="Prefijo del país" autocomplete="tel-country-code" class="select-prefijo-contactenos">
+                            <option value="" selected disabled class="opcion-prefijo-contactenos">Prefijo</option>
+                            <option value="+54" class="opcion-prefijo-contactenos">+54 Argentina</option>
+                            <option value="+56" class="opcion-prefijo-contactenos">+56 Chile</option>
+                            <option value="+57" class="opcion-prefijo-contactenos">+57 Colombia</option>
+                            <option value="+593" class="opcion-prefijo-contactenos">+593 Ecuador</option>
+                            <option value="+34" class="opcion-prefijo-contactenos">+34 España</option>
+                            <option value="+1" class="opcion-prefijo-contactenos">+1 EE. UU.</option>
+                            <option value="+52" class="opcion-prefijo-contactenos">+52 México</option>
+                            <option value="+51" class="opcion-prefijo-contactenos">+51 Perú</option>
+                            <option value="+58" class="opcion-prefijo-contactenos">+58 Venezuela</option>
+                        </select>
+
+                        <input type="tel" name="telefono" placeholder="Teléfono" autocomplete="tel-national" class="campo-telefono-contactenos">
+
+                    </div>
+
+                    <textarea name="mensaje" placeholder="Mensaje" required class="campo-mensaje-contactenos"></textarea>
+
+                    <!-- Casillas de verificación -->
+                    <label class="check-contactenos">
+                        <input type="checkbox" name="mayor_de_edad" required class="input-check-contactenos">
+                        Soy mayor de edad y acepto los Términos de uso y la Política de privacidad
+                    </label>
+
+                    <label class="check-contactenos">
+                        <input type="checkbox" name="novedades" class="input-check-contactenos">
+                        Quiero estar al día con las novedades
+                    </label>
+
+                    <!-- Botón de envío -->
+                    <button type="submit" class="boton-enviar-contactenos">
+                        Enviar mensaje
+                    </button>
+
+                </form>
+            </div>
+        </main>
+    </div>
+    <footer class="footer-contactenos">
+
+        <div class="contenido-footer-contactenos">
+
+            <div class="columna-footer-contactenos columna-descripcion-contactenos">
+                <h2 class="titulo-footer-contactenos">ZooNiverse</h2>
+                <p class="texto-footer-contactenos">
+                    Un universo lleno de vida, naturaleza y especies extraordinarias. Descubre y aprende con nosotros.
+                </p>
+            </div>
+
+            <div class="columna-footer-contactenos">
+                <h3 class="subtitulo-footer-contactenos">Navegación</h3>
+                <a href="Inicio.html" class="enlace-footer-contactenos">Inicio</a>
+                <a href="SobreNosotros.html" class="enlace-footer-contactenos">Sobre nosotros</a>
+                <a href="Animales.html" class="enlace-footer-contactenos">Animales</a>
+                <a href="SitiosInteres.html" class="enlace-footer-contactenos">Sitios de interés</a>
+            </div>
+
+            <div class="columna-footer-contactenos">
+                <h3 class="subtitulo-footer-contactenos">Contacto</h3>
+                <p class="texto-footer-contactenos">📧 zooniverse@gmail.com</p>
+                <p class="texto-footer-contactenos">📍 Medellín, Colombia</p>
+                <a href="Contactenos.html" class="enlace-footer-contactenos">Escríbenos</a>
+            </div>
+
+            <div class="columna-footer-contactenos">
+                <h3 class="subtitulo-footer-contactenos">Síguenos</h3>
+                <a href="https://www.instagram.com/" target="_blank" class="enlace-footer-contactenos">Instagram</a>
+                <a href="https://www.facebook.com/" target="_blank" class="enlace-footer-contactenos">Facebook</a>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
