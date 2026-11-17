@@ -1,0 +1,623 @@
+/* ==========================================
+   ESTILOS GENERALES Y BASE
+   ========================================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #0b110d;
+    color: #f8fafc;
+    min-height: 100vh;
+}
+
+/* ==========================================
+   CONTENEDOR PRINCIPAL / HERO
+   ========================================== */
+.hero-container {
+    background-color: #0b110d;
+    min-height: 90vh;
+    margin: 0;
+    padding: 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.40)), url('img/Loro_inicio.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ==========================================
+   NAVEGACIÓN
+   ========================================== */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.nav-brand {
+    font-size: 22px;
+    font-weight: bold;
+    color: #c2c784;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    font-size: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-link.dim {
+    color: #aaaaaa;
+    font-weight: normal;
+}
+
+.nav-contact-btn {
+    font: inherit;
+    color: #f8fafc;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    font-size: 14px;
+    transition: text-decoration 0.2s;
+}
+
+.nav-contact-btn:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   POPOVER DE CONTACTO
+   ========================================== */
+.contact-popover {
+    width: max(min(560px, 100%), clamp(0px, calc((601px - 100vw) * 10000), 100%));
+    min-height: clamp(0px, calc((601px - 100vw) * 10000), 100dvh);
+    max-height: calc(100dvh - 32px);
+    padding: 0;
+    border: 1px solid rgba(194, 199, 132, 0.4);
+    border-radius: 16px;
+    color: #ffffff;
+    background: #141c16;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, .85);
+    overflow: auto;
+    overscroll-behavior: contain;
+}
+
+.popover-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 78px;
+    background: #0b110d;
+    border-bottom: 1px solid rgba(194, 199, 132, 0.2);
+}
+
+.popover-title {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: #c2c784;
+    letter-spacing: 1px;
+}
+
+.popover-close-btn {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    color: #c2c784;
+    background: none;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.popover-close-btn:hover {
+    background: rgba(194, 199, 132, 0.15);
+}
+
+/* Formulario dentro del Popover */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 26px 21px 28px;
+}
+
+.contact-intro {
+    margin: 0 0 8px;
+    line-height: 24px;
+    color: #aaaaaa;
+    font-size: 14px;
+}
+
+.form-input {
+    width: 100%;
+    height: 56px;
+    padding: 0 17px;
+    font: inherit;
+    color: #ffffff;
+    background: #0b110d;
+    border: 1px solid rgba(194, 199, 132, 0.3);
+    border-radius: 28px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus {
+    border-color: #c2c784;
+    box-shadow: 0 0 0 1px #c2c784;
+}
+
+/* Grupo de Teléfono y Prefijo */
+.phone-group {
+    display: flex;
+    height: 56px;
+    border: 1px solid rgba(194, 199, 132, 0.3);
+    border-radius: 28px;
+    overflow: hidden;
+    background: #0b110d;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.phone-group:focus-within {
+    border-color: #c2c784;
+    box-shadow: 0 0 0 1px #c2c784;
+}
+
+.phone-select {
+    height: 100%;
+    font: inherit;
+    color: #aaaaaa;
+    background-color: #0b110d;
+    border: 0;
+    flex: 0 0 clamp(130px, 35%, 180px);
+    padding: 0 30px 0 17px;
+    border-right: 1px solid rgba(194, 199, 132, 0.3);
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.phone-select option {
+    background: #0b110d;
+    color: #fff;
+}
+
+.phone-input {
+    height: 100%;
+    font: inherit;
+    color: #ffffff;
+    background-color: #0b110d;
+    border: 0;
+    flex: 1;
+    min-width: 0;
+    padding: 0 17px;
+    outline: none;
+}
+
+.form-textarea {
+    width: 100%;
+    height: 100px;
+    padding: 18px 17px;
+    font: inherit;
+    color: #ffffff;
+    background: #0b110d;
+    border: 1px solid rgba(194, 199, 132, 0.3);
+    border-radius: 20px;
+    line-height: 22px;
+    resize: none;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-textarea:focus {
+    border-color: #c2c784;
+    box-shadow: 0 0 0 1px #c2c784;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #aaaaaa;
+    cursor: pointer;
+}
+
+.custom-checkbox {
+    flex: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: #c2c784;
+    cursor: pointer;
+}
+
+.submit-btn {
+    height: 44px;
+    margin-top: 10px;
+    font: inherit;
+    font-size: 15px;
+    font-weight: bold;
+    color: #0b110d;
+    background: #c2c784;
+    border: 0;
+    border-radius: 22px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #ffffff;
+    color: #0b110d;
+}
+
+/* ==========================================
+   LÓGICA DE PESTAÑAS (TABS) Y SECCIÓN PRINCIPAL
+   ========================================== */
+.tab-radio {
+    display: none;
+}
+
+.page-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px 20px 20px;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #c2c784;
+    margin: 0 0 10px 0;
+    letter-spacing: -0.5px;
+}
+
+.main-subtitle {
+    color: #94a3b8;
+    font-size: 16px;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+    min-height: 550px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Menú Lateral */
+.sidebar-menu {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+.tab-label {
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    cursor: pointer;
+    color: #94a3b8;
+    font-weight: 600;
+    font-size: 14px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.tab-label:hover {
+    color: #c2c784;
+    border-color: #c2c784;
+}
+
+/* Panel de Información */
+.info-panel {
+    flex: 1;
+    min-width: 300px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.tab-panel {
+    display: none;
+}
+
+/* Lógica de Selección de Pestañas con CSS puro */
+#tab1:checked ~ .content-wrapper .sidebar-menu label[for="tab1"],
+#tab2:checked ~ .content-wrapper .sidebar-menu label[for="tab2"],
+#tab3:checked ~ .content-wrapper .sidebar-menu label[for="tab3"],
+#tab4:checked ~ .content-wrapper .sidebar-menu label[for="tab4"],
+#tab5:checked ~ .content-wrapper .sidebar-menu label[for="tab5"] {
+    background: rgba(194, 199, 132, 0.15) !important;
+    border-color: #c2c784 !important;
+    color: #c2c784 !important;
+}
+
+#tab1:checked ~ .content-wrapper .info-panel #panel1,
+#tab2:checked ~ .content-wrapper .info-panel #panel2,
+#tab3:checked ~ .content-wrapper .info-panel #panel3,
+#tab4:checked ~ .content-wrapper .info-panel #panel4,
+#tab5:checked ~ .content-wrapper .info-panel #panel5 {
+    display: block !important;
+}
+
+/* ==========================================
+   ESTILOS INTERNOS DE LOS PANELES
+   ========================================== */
+.panel-heading {
+    color: #c2c784;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.panel-sub {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.cards-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.event-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 18px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.event-tag {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.event-tag.green { color: #4ade80; }
+.event-tag.blue { color: #38bdf8; }
+
+.event-title {
+    color: #c2c784;
+    margin: 4px 0;
+    font-size: 16px;
+}
+
+.event-desc {
+    color: #94a3b8;
+    margin: 0;
+    font-size: 13px;
+}
+
+.badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.green-badge {
+    background: rgba(74, 222, 128, 0.1);
+    color: #4ade80;
+}
+
+.blue-badge {
+    background: rgba(56, 189, 248, 0.1);
+    color: #38bdf8;
+}
+
+.grid-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.sub-card {
+    flex: 1;
+    min-width: 200px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: 16px;
+}
+
+.sub-card-title {
+    color: #c2c784;
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.sub-card-desc {
+    color: #94a3b8;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.project-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    background: #c2c784;
+    color: #0b110d;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.project-btn:hover {
+    background: #a8ad6e;
+}
+
+.dining-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    flex-wrap: wrap;
+}
+
+.dining-title {
+    color: #c2c784;
+    margin: 0;
+    font-size: 15px;
+}
+
+.dining-desc {
+    color: #94a3b8;
+    margin: 3px 0 0 0;
+    font-size: 13px;
+}
+
+.location-tag {
+    color: #fbbf24;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.highlight-tag {
+    color: #38bdf8;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.rules-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.rule-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #cbd5e1;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 12px 16px;
+    border-radius: 10px;
+}
+
+.rule-icon {
+    color: #ef4444;
+    font-size: 18px;
+}
+
+.rule-icon.green-icon {
+    color: #4ade80;
+}
+
+/* ==========================================
+   PIE DE PÁGINA (FOOTER)
+   ========================================== */
+.main-footer {
+    background-color: #0b110d;
+    padding: 45px 40px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.footer-col-brand {
+    max-width: 260px;
+}
+
+.footer-brand-title {
+    color: #c2c784;
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin: 0 0 10px 0;
+}
+
+.footer-brand-text {
+    color: #aaaaaa;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.footer-col-title {
+    color: #c2c784;
+    font-size: 17px;
+    margin-top: 0;
+}
+
+.footer-link {
+    display: block;
+    color: #aaaaaa;
+    text-decoration: none;
+    margin: 12px 0;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: #c2c784;
+}
+
+.footer-text {
+    color: #aaaaaa;
+    font-size: 14px;
+    margin: 12px 0;
+}
